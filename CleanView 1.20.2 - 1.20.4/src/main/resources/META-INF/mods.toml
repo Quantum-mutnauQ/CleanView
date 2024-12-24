@@ -41,7 +41,7 @@ authors="${mod_authors}" #optional
 # The description text for the mod (multi line!) (#mandatory)
 description='''${mod_description}'''
 
-updateJSONURL="https://raw.githubusercontent.com/Quantum-mutnauQ/Free_Look_or_Perspective-NeoForge/Assets/updateJSON.json"
+updateJSONURL="https://raw.githubusercontent.com/Quantum-mutnauQ/CleanView/refs/heads/main/assets/updateJSON.json"
 displayTest="MATCH_VERSION"
 logoFile="icon.png"
 
