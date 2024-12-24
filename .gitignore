@@ -1,0 +1,30 @@
+*
+!.gitignore
+!README.md
+!/assets/
+!/assets/*
+
+!/*/src/
+!/*/src/**
+!/*/gradle/
+!/*/gradle/**
+!/*/build.gradle
+!/*/gradle.properties
+!/*/gradlew
+!/*/gradlew.bat
+!/*/LICENSE
+!/*/settings.gradle
+!/*/
+
+#for forge end of life
+!/Forge - End of Life/*/src/
+!/Forge - End of Life/*/src/**
+!/Forge - End of Life/*/gradle/
+!/Forge - End of Life/*/gradle/**
+!/Forge - End of Life/*/build.gradle
+!/Forge - End of Life/*/gradle.properties
+!/Forge - End of Life/*/gradlew
+!/Forge - End of Life/*/gradlew.bat
+!/Forge - End of Life/*/LICENSE
+!/Forge - End of Life/*/settings.gradle
+!/Forge - End of Life/*/
