@@ -43,7 +43,7 @@ description='''${mod_description}'''
 
 updateJSONURL="https://raw.githubusercontent.com/Quantum-mutnauQ/CleanView/refs/heads/main/assets/updateJSON.json"
 displayTest="MATCH_VERSION"
-logoFile="icon.png"
+bannerFile="icon.png"
 
 # The [[mixins]] block allows you to declare your mixin config to FML so that it gets loaded.
 [[mixins]]
