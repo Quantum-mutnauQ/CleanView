@@ -2,7 +2,7 @@
 !.gitignore
 !README.md
 !/assets/
-!/assets/*
+!/assets/**
 
 !/*/src/
 !/*/src/**
