@@ -39,7 +39,34 @@ authors="${mod_authors}" #optional
 #displayTest="MATCH_VERSION" # MATCH_VERSION is the default if nothing is specified (#optional)
 
 # The description text for the mod (multi line!) (#mandatory)
-description='''${mod_description}'''
+description='''CleanView
+This mod removes the vignette effect around the edges of the screen. The vignette is the dark overlay that appears around the edges of your display.
+
+Additional Features
+
+BoderVignette
+This option allows you to keep the red vignette effect that appears when you get close to the world border.
+
+
+CustomVignetteColor
+This option allows you to customize the vignette color using RGB values.
+
+
+SpyglassEffekt
+This option lets you choose whether the vignette effect should be displayed when looking through a spyglass. You can choose between the normal spyglass overlay, the vignette effect, or no overlay at all.
+
+
+EquipmentEffekt
+This option lets you choose how the screen should look when wearing equipment that applies a screen overlay, such as a carved pumpkin. You can choose between the normal overlay, a vignette effect, or no overlay at all.
+
+
+FreezingEffekt
+This option lets you choose how the screen should look when you are freezing in powder snow. You can choose between the normal freezing overlay, a vignette effect, or no overlay at all.
+
+
+PortalEffekt
+This option lets you choose how the screen should look when you are standing inside a portal. You can choose between the normal portal overlay, a vignette effect, or no overlay at all.
+'''
 
 updateJSONURL="https://raw.githubusercontent.com/Quantum-mutnauQ/CleanView/refs/heads/main/assets/updateJSON.json"
 displayTest="MATCH_VERSION"
