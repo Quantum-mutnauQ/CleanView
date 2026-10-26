@@ -76,9 +76,9 @@ public abstract class GuiMixin {
         boolean customEnabled = Config.CustomVignetteColorEnableValue;
 
         if (customEnabled) {
-            baseR = 1.0F - Mth.clamp(Config.CustomVignetteColorValue.red, 0.0F, 1.0F);
-            baseG = 1.0F - Mth.clamp(Config.CustomVignetteColorValue.green, 0.0F, 1.0F);
-            baseB = 1.0F - Mth.clamp(Config.CustomVignetteColorValue.blue, 0.0F, 1.0F);
+            baseR = 1f - Mth.clamp(Config.CustomVignetteColorValue.red, 0.0F, 1.0F);
+            baseG = 1f - Mth.clamp(Config.CustomVignetteColorValue.green, 0.0F, 1.0F);
+            baseB = 1f - Mth.clamp(Config.CustomVignetteColorValue.blue, 0.0F, 1.0F);
         } else {
             float brightness = Mth.clamp(this.vignetteBrightness, 0.0F, 1.0F);
             baseR = baseG = baseB = brightness;
@@ -100,10 +100,19 @@ public abstract class GuiMixin {
         float greenBlue = Mth.lerp(borderWarningStrength, baseG, 1.0F);
         float blue = Mth.lerp(borderWarningStrength, baseB, 1.0F);
 
+        RenderSystem.disableDepthTest();
+        RenderSystem.depthMask(false);
+        RenderSystem.enableBlend();
+        RenderSystem.blendFuncSeparate(GlStateManager.SourceFactor.ZERO, GlStateManager.DestFactor.ONE_MINUS_SRC_COLOR, GlStateManager.SourceFactor.ONE, GlStateManager.DestFactor.ZERO);
         if (customEnabled || borderWarningStrength > 0.0F) {
             graphics.setColor(red, greenBlue, blue, 1F);
             graphics.blit(VIGNETTE_LOCATION, 0, 0, -90, 0.0F, 0.0F, graphics.guiWidth(), graphics.guiHeight(), graphics.guiWidth(), graphics.guiHeight());
         }
+        RenderSystem.depthMask(true);
+        RenderSystem.enableDepthTest();
+        graphics.setColor(1.0F, 1.0F, 1.0F, 1.0F);
+        RenderSystem.defaultBlendFunc();
+        RenderSystem.disableBlend();
     }
 
     @Inject(method = "renderCameraOverlays",at = @At("HEAD"),cancellable = true)
