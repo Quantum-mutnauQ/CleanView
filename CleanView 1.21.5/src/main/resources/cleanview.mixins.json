@@ -1,0 +1,15 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "quantum.cleanview.mixin",
+  "compatibilityLevel": "JAVA_8",
+  "refmap": "CleanView.refmap.json",
+  "mixins": [
+  ],
+  "client": [
+    "GuiMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
